@@ -21,7 +21,7 @@ soup1 = driver.page_source.encode("utf-8")
 
 driver.close()
 
-soup = BeautifulSoup(soup1)
+soup = BeautifulSoup(soup1, 'lxml')
 
 try:
     soup.find('span', class_='qtyValidate_color', style='display: block;').contents[0] == 'הכמות המבוקשת אינה קיימת'
